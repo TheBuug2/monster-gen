@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+
+//declaration: gives the computer a heads up that you're writing your own function
+void MonsterGen();
+
+int main(){
+	srand(time(NULL));
+	while (1) {
+		MonsterGen();
+		system("pause");
+	}
+
+}
+
+void MonsterGen() {
+	int num = rand()%100+1;
+	cout << "we generated " << num << endl;
+
+	if (num < 15) { //15%
+		cout << "a skeleton has appeared" << endl;
+
+	}
+	else if (num < 20) { //5%
+		cout << "a wraith has appeared" << endl;
+	
+	}
+	else if (num < 50) { //30%
+		cout << "a Zombie attempts to bite you!" << endl;
+
+	}
+	else if (num < 75) { //25%
+		cout << "a spider crawls towards you" << endl;
+
+	}
+	else { //35%
+		cout << "a rat appears" << endl;
+	}
+
+}//end of main
